@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f3a5f">
+<title>Qarz daftari</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Qarz daftari</h1>
+  <div class="total"><span id="total">0</span><small>so‘m</small></div>
+  <div class="meta" id="meta"></div>
+</header>
+<div class="tools">
+  <input class="search" id="q" type="search" placeholder="Ism yoki telefon bo‘yicha qidirish">
+  <div class="tabs" id="tabs">
+    <button data-f="active" aria-pressed="true">Faol</button>
+    <button data-f="late" aria-pressed="false">Muddati o‘tgan</button>
+    <button data-f="paid" aria-pressed="false">To‘langan</button>
+  </div>
+</div>
+<main id="list"></main>
+<button class="fab" id="add">+ Yangi qarz</button>
+
+<dialog id="dlg">
+  <h2 id="dt">Yangi qarz</h2>
+  <label>Ism familiya<input id="fn" autocomplete="off"></label>
+  <label>Telefon raqami<input id="fp" type="tel" placeholder="+998 90 123 45 67"></label>
+  <label>Qarz summasi (so‘m)<input id="fa" type="number" inputmode="numeric" min="0"></label>
+  <label>Qaytarish sanasi<input id="fd" type="date"></label>
+  <div class="btns"><button id="cancel">Bekor qilish</button><button class="ok" id="save">Saqlash</button></div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
